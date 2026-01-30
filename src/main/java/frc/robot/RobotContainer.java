@@ -35,6 +35,9 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
+      // Outtake controls
+      controller.leftTrigger().whileTrue(outtake.spinOuttake()).onFalse(outtake.stopOuttake());
+  
       controller.b().whileTrue(intake.runIntake()).onFalse(intake.stopIntake());
       controller.a().whileTrue(intake.slowIntake()).onFalse(intake.stopIntake());
       controller.x().onTrue(intake.stopIntake());
@@ -62,10 +65,7 @@ public class RobotContainer {
     // cancelling on release.
     m_driverController.b().whileTrue(m_exampleSubsystem.exampleMethodCommand());
   }
-  private void configOuttakeBindings() {
-    Trigger outtakePress = m_driverController.b();
-    outtakePress.whileTrue(outtake.spinOuttake()).onFalse(outtake.stopOuttake());
-  }
+    
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.
    *

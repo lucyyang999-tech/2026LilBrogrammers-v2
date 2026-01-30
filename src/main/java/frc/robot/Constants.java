@@ -53,4 +53,31 @@ public final class Constants {
     public static final int outtakeMotorID = 18;
     public static final double outtakeSpeed = 0.3;
   }
+
+  public static class MaeherElevatorC{
+     
+    public static final int elevatorMotorID = 21;
+    public static final int followerMotorID = 22;
+    public static final int debounceID = 23;
+    public static final int limitSwitchID = 24;
+
+    public static final double firstPosition  = 5.0;
+    public static final double secondPosition = 10.0;
+    public static final double thirdPosition  = 15.0;
+    public static final double fourthPosition = 25.0;
+
+    public static final double upSpeed = .01;
+    public static final double downSpeed = -.01;
+    public static final Slot0Configs config = new Slot0Configs()
+    .withKA(5)
+    .withKG(.4)
+    .withKS(.05)
+    .withKV(.05)
+    .withKP(5)
+    .withKI(.001)
+    .withKD(0);
+    public static final MotionMagicConfigs motion = new MotionMagicConfigs()
+  .withMotionMagicAcceleration(3)
+  .withMotionMagicCruiseVelocity(3);
+  }
 }

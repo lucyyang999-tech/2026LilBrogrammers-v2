@@ -54,6 +54,13 @@ public final class Constants {
     public static final double outtakeSpeed = 0.3;
   }
 
+  public static class IntakeConstants{
+    public static final int inttakeMotorID = 16;
+    public static final double inttakeSpeed = 0.2;
+
+
+  }
+
   public static class MaeherElevatorC{
      
     public static final int elevatorMotorID = 21;
